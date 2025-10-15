@@ -4,7 +4,7 @@
 
 PDFRenamer is an automated solution for renaming PDF files based on their content, metadata, or custom rules. Designed for businesses and professionals who handle large volumes of PDF documents.
 
-![Version](https://img.shields.io/badge/version-1.25.288.8-blue)
+![Version](https://img.shields.io/badge/version-1.25.288.7-blue)
 ![Platform](https://img.shields.io/badge/platform-Windows%2010%2F11-brightgreen)
 ![.NET](https://img.shields.io/badge/.NET-9.0-purple)
 
@@ -25,19 +25,19 @@ PDFRenamer is an automated solution for renaming PDF files based on their conten
 
 ## 📥 Download
 
-**Latest Release: v1.25.288.8**
+**Latest Release: v1.25.288.7**
 
 Choose the installer that fits your needs:
 
 ### Option 1: Bundle Installer (Recommended)
-**[Download PDFRenamer-Setup-1.25.288.8.exe](../../releases/latest/download/PDFRenamer-Setup-1.25.288.8.exe)**
+**[Download PDFRenamer-Setup-1.25.288.7.exe](../../releases/latest/download/PDFRenamer-Setup-1.25.288.7.exe)**
 - ✅ Includes .NET 9.0 Runtime
 - ✅ One-click installation
 - ✅ Best for most users
 - 📦 Size: ~4.5 MB
 
 ### Option 2: ZIP Archive
-**[Download PDFRenamer-1.25.288.8.zip](../../releases/latest/download/PDFRenamer-1.25.288.8.zip)**
+**[Download PDFRenamer-1.25.288.7.zip](../../releases/latest/download/PDFRenamer-1.25.288.7.zip)**
 - ✅ Contains MSI installer + CAB files
 - ✅ For manual deployment
 - ✅ Ideal for enterprise/Group Policy deployment
@@ -52,7 +52,10 @@ Choose the installer that fits your needs:
 | Requirement | Minimum |
 |------------|---------|
 | **Operating System** | Windows 10 (64-bit) or later |
+| **RAM** | 2 GB (4 GB recommended) |
+| **Disk Space** | 100 MB free |
 | **.NET Runtime** | 9.0 (included in bundle installer) |
+| **Display** | 1280x720 or higher |
 
 ---
 
@@ -61,7 +64,7 @@ Choose the installer that fits your needs:
 ### Installation
 
 1. **Download** the installer from the [Releases](../../releases) page
-2. **Run** `PDFRenamer-Setup-1.25.288.8.exe`
+2. **Run** `PDFRenamer-Setup-1.25.288.7.exe`
 3. **Follow** the installation wizard
 4. **Launch** PDFRenamer from Start Menu or Desktop
 
@@ -153,7 +156,7 @@ PDFRenamer checks for updates automatically and notifies you when a new version 
 net stop PDFRenamerService
 
 # Run the installer
-.\PDFRenamer-Setup-1.25.288.8.exe
+.\PDFRenamer-Setup-1.25.288.7.exe
 
 # Start the service
 net start PDFRenamerService
@@ -169,7 +172,7 @@ Use the ZIP archive for silent deployment via Group Policy:
 
 ```powershell
 # Extract ZIP
-Expand-Archive PDFRenamer-1.25.288.8.zip -DestinationPath C:\Temp\PDFRenamer
+Expand-Archive PDFRenamer-1.25.288.7.zip -DestinationPath C:\Temp\PDFRenamer
 
 # Silent install MSI
 msiexec /i "C:\Temp\PDFRenamer\PDFRenamer-Setup.msi" /quiet /norestart
@@ -227,7 +230,7 @@ PDFRenamer is built with modern technologies:
 
 **Petr Šindelář**  
 Email: petr.sindelar@heidelberg.com  
-Company: Heidelberg CZ & SK s.r.o. (HCZ)
+Company: Heidelberg Cement Západ (HCZ)
 
 ---
 
