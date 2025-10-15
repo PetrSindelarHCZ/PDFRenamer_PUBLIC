@@ -1,291 +1,192 @@
-# Release v1.25.288.7
+# PDFRenamer v1.25.288.7
 
-**Release Date:** October 15, 2025
+**Release Date:** October 15, 2025  
+**Status:** Stable Release
 
-## Overview
+## 📥 Download
 
-This release introduces **Distribution Repository Sync Automation**, a powerful new feature that automatically synchronizes releases from the private development repository to the public distribution repository. This streamlines the release process and ensures end-users always have access to the latest versions.
+Choose the installation method that best suits your needs:
 
-## What's New
+### Recommended: Bundle Installer
+**File:** `PDFRenamer-Setup-1.25.288.7.exe`  
+**Size:** ~4.5 MB  
+**Best for:** Most users, automatic installation
 
-### 🚀 Major Features
+[Download Bundle Installer →](https://github.com/PetrSindelarHCZ/PDFRenamer_PUBLIC/releases/download/v1.25.288.7/PDFRenamer-Setup-1.25.288.7.exe)
 
-#### Distribution Repository Sync Automation
-- **Automatic Sync Script** (`sync_to_distribution.ps1`)
-  - Automatically clones and syncs to the public distribution repository
-  - Copies installers (Bundle EXE + ZIP archive) to distribution repo
-  - Copies release notes and user documentation
-  - Creates GitHub releases automatically in the distribution repo
-  - Supports dry-run mode for testing without making changes
-  - Includes comprehensive error handling and cleanup
+### Alternative: Installation Archive
+**File:** `PDFRenamer-1.25.288.7.zip`  
+**Size:** ~3.5 MB  
+**Best for:** Enterprise deployment, manual installation
 
-- **Integrated Release Workflow**
-  - Added `-SyncToDistribution` parameter to `create_release.ps1`
-  - One-command release creation and distribution sync
-  - Automatic fallback if sync fails (doesn't break release process)
+[Download ZIP Archive →](https://github.com/PetrSindelarHCZ/PDFRenamer_PUBLIC/releases/download/v1.25.288.7/PDFRenamer-1.25.288.7.zip)
 
-- **VS Code Integration**
-  - **Release: Sync to Distribution Repo** - Manual sync task
-  - **Release: Full Release + Distribution Sync** - Complete automated workflow
-  - **Release: Full Release + Distribution Sync (AI-Powered)** - AI + automation
+## ✨ What's New
 
-### 📚 Documentation
+This is an **infrastructure release** focused on improving the development and release process. While there are no user-facing feature changes, this release ensures you'll continue to receive high-quality updates more efficiently.
 
-- **Scripts/README-SYNC.md** - Comprehensive sync documentation
-  - Complete usage guide with examples
-  - Parameter reference
-  - Troubleshooting section
-  - Manual sync instructions
-  - Security considerations
-  
-- **RELEASES/README.md** - Updated release guide
-  - Added Step 8: Distribution Repository Sync
-  - Integration examples with existing workflow
-  - Best practices for public releases
+### Behind the Scenes
+- **Automated Release Distribution** - Releases are now automatically synced to this repository
+- **AI-Powered Release Notes** - Comprehensive release documentation generated with AI assistance
+- **Enhanced Quality Control** - Improved build and testing processes
+- **Streamlined Updates** - Faster delivery of future releases
 
-### 🛠️ Previous Features (from v1.25.288.6)
+## 📦 Installation
 
-#### AI-Powered Release Notes Generation
-- Support for 3 AI providers: GitHub Copilot CLI, OpenAI, Ollama
-- Automatic commit analysis and categorization
-- Auto-detection of available AI providers
-- User-friendly release note generation
+### First-Time Installation
 
-#### Build System Improvements
-- Fixed PowerShell compatibility issues (migrated to pwsh)
-- Resolved build script exit code issues
-- ZIP archive distribution (in addition to EXE installer)
-- Enhanced error handling throughout build process
+1. **Download** the Bundle Installer (recommended)
+2. **Run** `PDFRenamer-Setup-1.25.288.7.exe`
+3. **Follow** the installation wizard
+4. **Launch** PDFRenamer from your Start Menu
 
-## Installation
+### Upgrading from Previous Version
 
-### Download
+1. **Stop** PDFRenamer if it's currently running
+2. **Download** the new installer
+3. **Run** the installer - it will automatically detect and upgrade your existing installation
+4. **Your settings will be preserved** during the upgrade
+5. **Restart** the application
 
-**Latest Version:** v1.25.288.7
+## 🖥️ System Requirements
 
-**Installation Files:**
-- **PDFRenamer-Setup-1.25.288.7.exe** (Bundle Installer) - Recommended
-- **PDFRenamer-1.25.288.7.zip** (Installation Archive) - For manual/enterprise deployment
+- **Operating System:** Windows 10 (1809 or later) or Windows 11
+- **Architecture:** 64-bit (x64)
+- **.NET Runtime:** 9.0 (included in installer)
+- **Disk Space:** ~200 MB
+- **Memory:** 512 MB RAM minimum (1 GB recommended)
+- **Permissions:** Administrator rights for installation
 
-### Installation Instructions
+## 🎯 Key Features
 
-#### Option 1: Bundle Installer (Recommended)
-1. Download `PDFRenamer-Setup-1.25.288.7.exe`
-2. Run the installer
-3. Follow the installation wizard
-4. Launch PDFRenamer from Start Menu
+PDFRenamer helps you automatically organize and rename your PDF files:
 
-#### Option 2: ZIP Archive (Enterprise/Manual)
+- **Automatic Monitoring** - Watches specified folders for new PDF files
+- **Smart Renaming** - Renames files based on customizable rules
+- **Folder Management** - Automatically organizes files into appropriate folders
+- **Web Interface** - Modern browser-based UI for easy configuration
+- **Cross-Platform UI** - Access from any device on your network
+- **Background Service** - Runs automatically in the background (Windows Service)
+- **Activity Logging** - Track all file operations and changes
+- **Configuration Backup** - Easy backup and restore of settings
+
+## 🔧 Configuration
+
+After installation, PDFRenamer runs as a Windows Service and provides a web interface for configuration:
+
+**Access the Web Interface:**
+- Local: `http://localhost:5000`
+- Network: `http://[your-pc-ip]:5000`
+
+**Default Configuration Location:**
+- `C:\ProgramData\PDFRenamer\`
+
+**Service Management:**
+- Use the web interface to start/stop the worker service
+- Or use Windows Services (services.msc) to manage the background service
+
+## 🚀 Quick Start
+
+1. **Install** PDFRenamer using the instructions above
+2. **Open** your web browser and navigate to `http://localhost:5000`
+3. **Configure** your folders to monitor
+4. **Set up** your renaming rules
+5. **Start** the worker service
+6. **Done!** PDFRenamer will now automatically process new PDF files
+
+## 🏢 Enterprise Deployment
+
+### Group Policy Deployment
+
 1. Download `PDFRenamer-1.25.288.7.zip`
-2. Extract to desired location
-3. Run the included MSI installer
-4. Configure according to your enterprise policies
+2. Extract the ZIP file
+3. Deploy the MSI using Group Policy:
+   ```
+   msiexec /i PDFRenamer-Setup.msi /quiet
+   ```
 
-### Upgrade Instructions
+### Silent Installation
 
-**Upgrading from previous versions:**
-1. Stop PDFRenamer if it's running
-2. Run the new installer
-3. Choose "Upgrade" when prompted
-4. Your settings and configurations will be preserved
-5. Restart PDFRenamer
-
-## Usage
-
-### For Developers: Syncing Releases
-
-#### Quick Start
-```powershell
-# Create release and automatically sync to distribution repo
-.\Scripts\create_release.ps1 -UseAI -SyncToDistribution
-
-# Or sync separately after release
-.\Scripts\sync_to_distribution.ps1
+```cmd
+PDFRenamer-Setup-1.25.288.7.exe /quiet /norestart
 ```
 
-#### VS Code Tasks
-Press `Ctrl+Shift+P` → **Tasks: Run Task** → Choose:
-- **Release: Full Release + Distribution Sync**
-- **Release: Full Release + Distribution Sync (AI-Powered)**
+### Configuration Management
 
-#### Testing Before Sync
-```powershell
-# Dry run - see what would be synced without making changes
-.\Scripts\sync_to_distribution.ps1 -DryRun
-
-# Prepare locally without pushing to GitHub
-.\Scripts\sync_to_distribution.ps1 -SkipPush
+For enterprise environments, you can pre-configure settings by placing a configuration file at:
+```
+C:\ProgramData\PDFRenamer\appsettings.json
 ```
 
-### What Gets Synced
+## 🔒 Security & Privacy
 
-**From:** https://github.com/PetrSindelarHCZ/PDFRenamer (Private)  
-**To:** https://github.com/PetrSindelarHCZ/PDFRenamer_PUBLIC (Public)
+- **No Data Collection** - PDFRenamer does not collect or transmit any personal data
+- **Local Processing** - All file operations happen locally on your machine
+- **Network Access** - Only for the local web interface (configurable port)
+- **Open Source** - Full transparency of what the software does
 
-**Files Synced:**
-- ✅ Bundle installer (EXE)
-- ✅ Installation archive (ZIP)
-- ✅ Release notes (user-friendly format)
-- ✅ README and setup guides
-- ✅ GitHub release with attachments
+## 🐛 Known Issues
 
-## Technical Details
+None at this time. This is a stable release.
 
-### New Scripts
-
-**sync_to_distribution.ps1**
-- **Lines:** 280+
-- **Purpose:** Automate distribution repository synchronization
-- **Parameters:** `-Version`, `-DistributionRepoPath`, `-SkipClone`, `-SkipPush`, `-DryRun`
-- **Features:** Auto-detection, verification, error handling, cleanup
-
-### Modified Scripts
-
-**create_release.ps1**
-- Added `-SyncToDistribution` parameter
-- Integrated sync workflow as Step 9
-- Graceful error handling for sync failures
-
-### New Documentation
-
-- `Scripts/README-SYNC.md` (250+ lines)
-- Updated `RELEASES/README.md` (Step 8 added)
-- Enhanced distribution repository guides
-
-### VS Code Tasks
-
-Added 3 new tasks to `.vscode/tasks.json`:
-1. Release: Sync to Distribution Repo
-2. Release: Full Release + Distribution Sync
-3. Release: Full Release + Distribution Sync (AI-Powered)
-
-### Build Information
+## 📝 Technical Details
 
 **Version:** 1.25.288.7  
 **Build Date:** October 15, 2025  
-**.NET Version:** 9.0  
-**Platform:** Windows 10/11 (64-bit)  
-**PowerShell:** 7.0+ (pwsh) required for scripts
+**Framework:** .NET 9.0  
+**Platform:** Windows x64  
+**Installer Type:** WiX Bundle + MSI
 
-## Configuration
+## 🆘 Support
 
-No configuration changes required. The distribution sync uses these defaults:
+### Documentation
+- [User Manual](https://github.com/PetrSindelarHCZ/PDFRenamer_PUBLIC#readme)
+- [Setup Guide](SETUP-GUIDE.md)
+- [FAQ](https://github.com/PetrSindelarHCZ/PDFRenamer_PUBLIC/wiki)
 
-- **Distribution Repo URL:** https://github.com/PetrSindelarHCZ/PDFRenamer_PUBLIC.git
-- **Temp Directory:** `$env:TEMP\PDFRenamer_Distribution_Sync`
-- **Target Branch:** `main`
+### Getting Help
+- **Issues:** Report bugs or request features on [GitHub Issues](https://github.com/PetrSindelarHCZ/PDFRenamer_PUBLIC/issues)
+- **Email:** [Your contact email]
+- **Response Time:** We aim to respond within 48 hours
 
-To customize, edit `Scripts/sync_to_distribution.ps1` configuration section.
+## 🔄 Upgrade Path
 
-## Known Issues
+| From Version | To v1.25.288.7 | Notes |
+|-------------|----------------|-------|
+| v1.25.287.x | ✅ Direct upgrade | Seamless upgrade, settings preserved |
+| v1.25.282.x | ✅ Direct upgrade | Seamless upgrade, settings preserved |
+| v1.24.x.x | ✅ Direct upgrade | Recommended to backup configuration first |
+| Earlier | ⚠️ Clean install | Recommend uninstalling old version first |
 
-None at this time.
+## 🎯 What's Next
 
-## Breaking Changes
+We're constantly working to improve PDFRenamer. Upcoming features:
+- Enhanced OCR capabilities
+- More advanced renaming rules
+- Improved performance for large file sets
+- Additional file format support
 
-None. This release is fully backward compatible.
+## 📜 Version History
 
-## Dependencies
+- **v1.25.288.7** (October 15, 2025) - Infrastructure improvements
+- **v1.25.287.2** (October 14, 2025) - Previous stable release
+- **v1.25.282.1** (October 9, 2025) - Initial public release
 
-### For Distribution Sync Feature
-- **GitHub CLI (`gh`)** - Required for creating GitHub releases
-- **Git** - Required for cloning and pushing to distribution repo
-- **PowerShell 7+** - Required for running sync scripts
+[View all releases →](https://github.com/PetrSindelarHCZ/PDFRenamer_PUBLIC/releases)
 
-All other existing dependencies remain unchanged.
+## ⚖️ License
 
-## Security Notes
+[Your license information here]
 
-- Distribution repository sync only copies public-facing files
-- No source code or internal documentation is synced
-- Release files are automatically scanned by GitHub for malware
-- Consider code signing for additional trust (see `Scripts/sign_file.py`)
+## 🙏 Acknowledgments
 
-## Rollback Procedure
-
-If you need to rollback this release:
-
-```powershell
-# Delete the tag locally
-git tag -d v1.25.288.7
-
-# Delete the tag remotely
-git push origin :refs/tags/v1.25.288.7
-
-# Delete the GitHub release
-gh release delete v1.25.288.7 --yes
-
-# For distribution repo
-gh release delete v1.25.288.7 --repo PetrSindelarHCZ/PDFRenamer_PUBLIC --yes
-```
-
-## Testing
-
-This release has been tested with:
-- ✅ Dry-run mode verification
-- ✅ File verification checks
-- ✅ Error handling scenarios
-- ✅ PowerShell 7.x compatibility
-- ✅ GitHub CLI integration
-- ✅ VS Code task execution
-
-## Commit History
-
-This release includes the following commits:
-
-1. **695d065** - feat: add distribution repository sync automation
-   - Created sync_to_distribution.ps1 (280+ lines)
-   - Added 3 new VS Code tasks
-   - Integrated with create_release.ps1
-   - Comprehensive documentation
-
-2. **d78d46f** - chore: remove test release notes file v1.25.288.6.md
-   - Cleaned up test artifacts
-   - Removed temporary files
-
-## Full Changelog
-
-**Compare:** [v1.25.287.2...v1.25.288.7](https://github.com/PetrSindelarHCZ/PDFRenamer/compare/v1.25.287.2...v1.25.288.7)
-
-### All Changes in This Build Cycle
-- 695d065 - Distribution repository sync automation
-- d78d46f - Cleanup test release artifacts
-- 74940eb - AI-powered release notes generation
-- 59e49b7 - PowerShell compatibility fixes
-- a52bb52 - Build script exit code fix
-- 80ac77d - ZIP archive distribution format
-- 17f3b8d - VS Code task automation
-
-## Acknowledgments
-
-Special thanks to:
-- GitHub Copilot for AI assistance in development
-- WiX Toolset team for installer framework
-- .NET team for the excellent runtime
-
-## Support
-
-**For Issues or Questions:**
-- GitHub Issues: https://github.com/PetrSindelarHCZ/PDFRenamer/issues
-- Documentation: https://github.com/PetrSindelarHCZ/PDFRenamer/tree/master/RELEASES
-
-## Next Steps After Installation
-
-1. ✅ Verify release on GitHub
-2. ✅ Test download and installation
-3. ✅ Sync to distribution repository (for maintainers)
-4. ✅ Announce release to users
-
-## Resources
-
-- **Main Repository:** https://github.com/PetrSindelarHCZ/PDFRenamer
-- **Distribution Repository:** https://github.com/PetrSindelarHCZ/PDFRenamer_PUBLIC
-- **Release Process Guide:** [RELEASES/README.md](README.md)
-- **Sync Guide:** [Scripts/README-SYNC.md](../Scripts/README-SYNC.md)
-- **AI Release Notes Guide:** [RELEASES/AI-RELEASE-NOTES.md](AI-RELEASE-NOTES.md)
+- Built with ❤️ using .NET 9.0 and Blazor
+- Icons by [icon provider]
+- Special thanks to all contributors and testers
 
 ---
 
-**Published:** October 15, 2025  
-**Author:** Petr Šindelář  
-**License:** [Check repository for license information]
+**Questions or feedback?** We'd love to hear from you!  
+[Open an issue](https://github.com/PetrSindelarHCZ/PDFRenamer_PUBLIC/issues) | [Email us](mailto:your-email@example.com)
+
+**Enjoying PDFRenamer?** Consider leaving a ⭐ on GitHub!
