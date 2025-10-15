@@ -227,7 +227,7 @@ PDFRenamer is built with modern technologies:
 
 **Petr Šindelář**  
 Email: petr.sindelar@heidelberg.com  
-Company: Heidelberg Cement Západ (HCZ)
+Company: Heidelberg CZ & SK s.r.o. (HCZ)
 
 ---
 
