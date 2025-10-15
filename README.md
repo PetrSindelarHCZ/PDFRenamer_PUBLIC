@@ -52,10 +52,7 @@ Choose the installer that fits your needs:
 | Requirement | Minimum |
 |------------|---------|
 | **Operating System** | Windows 10 (64-bit) or later |
-| **RAM** | 2 GB (4 GB recommended) |
-| **Disk Space** | 100 MB free |
 | **.NET Runtime** | 9.0 (included in bundle installer) |
-| **Display** | 1280x720 or higher |
 
 ---
 
