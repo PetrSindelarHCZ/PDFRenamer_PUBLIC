@@ -4,7 +4,7 @@
 
 PDFRenamer is an automated solution for renaming PDF files based on their content, metadata, or custom rules. Designed for businesses and professionals who handle large volumes of PDF documents.
 
-![Version](https://img.shields.io/badge/version-1.25.288.7-blue)
+![Version](https://img.shields.io/badge/version-1.25.315.2-blue)
 ![Platform](https://img.shields.io/badge/platform-Windows%2010%2F11-brightgreen)
 ![.NET](https://img.shields.io/badge/.NET-9.0-purple)
 
