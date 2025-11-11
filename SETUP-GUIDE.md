@@ -30,7 +30,7 @@ The following files have been created in `DistributionRepo/`:
    - Quick start guide
    - Enterprise deployment info
 
-2. **RELEASE-v1.25.288.7.md** - Release notes for v1.25.288.7
+2. **RELEASE-v1.25.315.2.md** - Release notes for v1.25.315.2
    - What'\''s new summary
    - Download links
    - Installation instructions
@@ -45,7 +45,7 @@ The following files have been created in `DistributionRepo/`:
 ```powershell
 # Copy the files to your distribution repo
 Copy-Item DistributionRepo\README.md <your-distribution-repo-path>\
-Copy-Item DistributionRepo\RELEASE-v1.25.288.7.md <your-distribution-repo-path>\
+Copy-Item DistributionRepo\RELEASE-v1.25.315.2.md <your-distribution-repo-path>\
 ```
 
 ### 2. Create Release on GitHub
@@ -54,12 +54,12 @@ When creating a release on GitHub:
 
 1. Go to your distribution repo
 2. Click "Releases" → "Create a new release"
-3. Tag: `v1.25.288.7`
-4. Title: `PDFRenamer v1.25.288.7`
-5. Copy content from `RELEASE-v1.25.288.7.md` into the description
+3. Tag: `v1.25.315.2`
+4. Title: `PDFRenamer v1.25.315.2`
+5. Copy content from `RELEASE-v1.25.315.2.md` into the description
 6. Upload your installer files:
-   - `PDFRenamer-Setup-1.25.288.7.exe`
-   - `PDFRenamer-1.25.288.7.zip`
+   - `PDFRenamer-Setup-1.25.315.2.exe`
+   - `PDFRenamer-1.25.315.2.zip`
 
 ### 3. Update Links
 
@@ -142,7 +142,7 @@ You can automate copying release files from private to public repo:
 
 ```powershell
 # After building release in private repo
-$version = "1.25.288.7"
+$version = "1.25.315.2"
 $privateRepo = "E:\Source\Repos\HCZ\PDFRenamer"
 $publicRepo = "E:\Source\Repos\HCZ\PDFRenamer-Distribution"
 
